@@ -38,7 +38,10 @@
 			
 			<thead>
 			<tr>
-			
+				<td>
+				<td>
+				<td>
+				<td>
 				<td><button class="btn btn-primary" name="ajouter" onclick="window.location.href='ajoutcovoiturage.php'">Ajouter nouveau covoiturage</button></td>
 			</tr>
 			<tr class="success">
