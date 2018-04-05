@@ -45,21 +45,20 @@
 				<td><button class="btn btn-primary" name="ajouter" onclick="window.location.href='covoiturage.php'">Retour liste</button></td>
 			</tr>
 			</thead>
-
-			<?php 
-			$covoit = $resultat->fetch();
-			while ($covoit) { ?>
+			
+			<fieldset> 
+			<legend>Informations</legend> 
+			<table>
 				<tr>
-				<td><?php echo utf8_encode($covoit->villeDepart); ?> </td>
-				<td><?php echo dateFrancais($covoit->jourDepart); ?> </td>
-				<td><?php echo $covoit->heureDepart; ?> </td>
-				<td><a href='detailCovoit.php?id=<?php echo $covoit->numCo; ?>' class="glyphicon glyphicon-zoom-in"> En savoir plus</a></td>
+					<td>Nom : <input type="text" name="nom"  class="form-control" placeholder="Votre nom de famille"> </td>
+					<td>Prénom : <input type="text" name="nom"  class="form-control" placeholder="Votre prénom"> </td>
 				</tr>
-				<?php 
-				// lecture du stage suivant
-				$covoit = $resultat->fetch();
-			} ?>
 			</table>
+			</fieldset> 
+			
+			</table>
+
+			
 	</div>
 	<?php include('../include/footer.php'); ?>
 </div>
