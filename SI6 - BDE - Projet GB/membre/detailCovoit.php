@@ -38,7 +38,7 @@
                         <td>Nombre de places :<?php echo $covoit->nbPlaces; ?></td>
                         <td>Prix : <?php echo $covoit->prix; ?> €</td>
                     <form method="POST" action="validation.php">
-                        <input type="hidden" name="covoit" value="<?php $covoit->numCo ?>">
+                        <input type="hidden" name="covoit" value="<?php echo($covoit->numCo); ?>">
                         <?php
                         if ($covoit->etat)
                             echo("<td class='success text-center'><input type='submit' class='btn btn-primary disabled' value='validé'/></td>");
