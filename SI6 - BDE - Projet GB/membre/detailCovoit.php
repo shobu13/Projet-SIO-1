@@ -37,7 +37,15 @@
                     <tr>
                         <td>Nombre de places :<?php echo $covoit->nbPlaces; ?></td>
                         <td>Prix : <?php echo $covoit->prix; ?> €</td>
-                        <td class="danger text-center">validation</td>
+                    <form method="POST" action="validation.php">
+                        <input type="hidden" name="covoit" value="<?php $covoit->numCo ?>">
+                        <?php
+                        if ($covoit->etat)
+                            echo("<td class='success text-center'><input type='submit' class='btn btn-primary disabled' value='validé'/></td>");
+                        else
+                            echo("<td class='danger text-center'><input type='submit' class='btn btn-danger' value='en attente de validation'/></td>");
+                        ?>
+                    </form>
                     </tr>
 
                     <tr>
