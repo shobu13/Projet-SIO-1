@@ -27,7 +27,13 @@
                 <h2>Liste des covoiturages</h2>
 
                 <table class="table table-striped">
-                    <thead><tr class="success">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button class="btn btn-primary" name="ajouter" onclick="window.location.href = 'ajoutcovoiturage.php'">Ajouter nouveau covoiturage</button></td>
+                        </tr><tr class="success">
                             <td>Destination</td>
                             <td>Date départ</td>
                             <td>Heure départ</td>
@@ -35,8 +41,8 @@
                         </tr></thead>
 
                     <?php
-                    echo 'PRIVILEGE : '.$_SESSION['privilege'];
-                    if ($_SESSION['privilege']=='admin') {
+                    echo 'PRIVILEGE : ' . $_SESSION['privilege'];
+                    if ($_SESSION['privilege'] == 'admin') {
                         //	on récupère toutes les lignes 
                         $resultat = $cnx->query("select * FROM covoiturage ORDER BY dateDepot DESC, etat;");
 
@@ -44,15 +50,15 @@
                         $resultat->setFetchMode(PDO::FETCH_OBJ);
                         $covoit = $resultat->fetch();
                         while ($covoit) {
-                            if($covoit->etat)
+                            if ($covoit->etat)
                                 echo '<tr>';
                             else
                                 echo "<tr class='danger'>";
                             ?>
-                                <td><?php echo utf8_encode($covoit->villeDepart); ?> </td>
-                                <td><?php echo dateFrancais($covoit->jourDepart); ?> </td>
-                                <td><?php echo $covoit->heureDepart; ?> </td>
-                                <td><a href='detailCovoit.php?id=<?php echo $covoit->numCo; ?>' class="glyphicon glyphicon-zoom-in"> En savoir plus</a></td>
+                            <td><?php echo utf8_encode($covoit->villeDepart); ?> </td>
+                            <td><?php echo dateFrancais($covoit->jourDepart); ?> </td>
+                            <td><?php echo $covoit->heureDepart; ?> </td>
+                            <td><a href='detailCovoit.php?id=<?php echo $covoit->numCo; ?>' class="glyphicon glyphicon-zoom-in"> En savoir plus</a></td>
                             </tr>
                             <?php
                             // lecture du stage suivant
