@@ -45,25 +45,27 @@
 			<table>
 				<tr>
 					<td></td>
-					<td></td>										
+					<td></td>	
+					<td></td>						
 					<td><button class="btn btn-primary" name="ajouter" onclick="window.location.href='covoiturage.php'">Retour liste</button></td>
 				</tr>
 				<tr>
-					<td>Nom : <input type="text" name="nom"  class="form-control" placeholder="Votre nom de famille"> </td>
-					<td> Prénom : <input type="text" name="nom"  class="form-control" placeholder="Votre prénom"> </td>
+					<td>Nom : <input type="text" name="nom"  class="form-control" placeholder="Votre nom de famille" required> </td>
+					<td> Prénom : <input type="text" name="nom"  class="form-control" placeholder="Votre prénom" required> </td>
+					<td> Numéro de téléphone : <input type="tel" name="tel"  class="form-control" placeholder="Votre téléphone" required> </td>
 				</tr>
 				<tr>
-					<td>Nombre de places : <input type="text" name="nbplaces"  class="form-control" placeholder="Nombre de places"> </td>
-					<td>Prix : <input type="text" name="prix"  class="form-control" placeholder="Prix du covoiturage"> </td>
+					<td>Nombre de places : <input type="text" name="nbplaces"  class="form-control" placeholder="Nombre de places" required> </td>
+					<td>Prix : <input type="text" name="prix"  class="form-control" placeholder="Prix du covoiturage" required> </td>
 				</tr>
 				<tr>
-					<td>Ville départ : <input type="text" name="villedepart"  class="form-control" placeholder="Ville départ"> </td>
-					<td>Point départ : <input type="text" name="nom"  class="form-control" placeholder="Point départ"> </td>
+					<td>Ville départ : <input type="text" name="villedepart"  class="form-control" placeholder="Ville départ" required> </td>
+					<td>Point départ : <input type="text" name="nom"  class="form-control" placeholder="Point départ" required> </td>
 					
 				</tr>
 				<tr>										
-					<td>Ville arrivée : <input type="text" name="villearrivee"  class="form-control" placeholder="Ville arrivée"> </td>
-					<td>Point arrivée : <input type="text" name="nom"  class="form-control" placeholder="Point arrivée"> </td>
+					<td>Ville arrivée : <input type="text" name="villearrivee"  class="form-control" placeholder="Ville arrivée" required> </td>
+					<td>Point arrivée : <input type="text" name="nom"  class="form-control" placeholder="Point arrivée" required> </td>
 				</tr>	
 				<tr>
 					<td><input class="btn btn-primary" type="submit" name="valider" value="Valider"></td>
