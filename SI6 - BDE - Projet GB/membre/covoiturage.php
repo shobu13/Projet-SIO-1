@@ -26,28 +26,13 @@
                 ?>
                 <h2>Liste des covoiturages</h2>
 
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button class="btn btn-primary" name="ajouter" onclick="window.location.href = 'ajoutcovoiturage.php'">Ajouter nouveau covoiturage</button></td>
-                        </tr><tr class="success">
-                            <td>Destination</td>
-                            <td>Date départ</td>
-                            <td>Heure départ</td>
-                            <td>En savoir plus</td>
-                        </tr></thead>
 
-<<<<<<< HEAD
 <!-- Obligatoirement avant la balise de fermeture de l'élément body  -->
 	<!-- Intégration de la libraire jQuery -->
 	<script src="bootstrap/js/jquery.js"></script>
 	<!-- Intégration de la libraire de composants du Bootstrap -->
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
-=======
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -62,8 +47,6 @@
                             <td>En savoir plus</td>
                         </tr></thead>
 
-=======
->>>>>>> 03943023ca28c2fffbfbb6c9bd2b9a9bed3ca3ab
                     <?php
                     echo 'PRIVILEGE : ' . $_SESSION['privilege'];
                     if ($_SESSION['privilege'] == 'admin') {
@@ -120,8 +103,4 @@
         <!-- Intégration de la libraire de composants du Bootstrap -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
-<<<<<<< HEAD
->>>>>>> ProjetAwen
-=======
->>>>>>> 03943023ca28c2fffbfbb6c9bd2b9a9bed3ca3ab
 </html>
