@@ -42,9 +42,9 @@
                             if (strstr($_SERVER['REQUEST_URI'], '/membre/')){
                                 echo '<li><a href="index.php">Mon compte</a></li>';
                                 echo '<li role="separator" class="divider"></li>';
-								echo '<li><a href="membre/covoiturage.php">Covoiturage</a></li>';
+								echo '<li><a href="covoiturage.php">Covoiturage</a></li>';
 								echo '<li role="separator" class="divider"></li>';
-                                echo '<li><a href="membre/pagehebergement.php">Hebergement</li>';
+                                echo '<li><a href="../membre/pagehebergement.php">Hebergement</li>';
                                 if ($_SESSION['privilege'] == 'admin' || $_SESSION['privilege'] == 'owner') { //Si le membre est admin, il peut avoir ce menu
                                     echo '<li role="separator" class="divider"></li>';
                                     echo '<li><a href="admin.php">Administration</a></li>';
@@ -54,7 +54,7 @@
                             } else {
                                 echo '<li><a href="membre/index.php">Mon compte</a></li>';
                                 echo '<li role="separator" class="divider"></li>';
-								echo '<li><a href="membre/covoiturage.php">Covoiturage</a></li>';
+								echo '<li><a href="covoiturage.php">Covoiturage</a></li>';
 								echo '<li role="separator" class="divider"></li>';
                                 echo '<li><a href="pagehebergement.php">Hebergement</a></li>';
 
