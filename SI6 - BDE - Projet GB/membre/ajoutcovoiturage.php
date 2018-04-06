@@ -51,8 +51,23 @@
 			<table>
 				<tr>
 					<td>Nom : <input type="text" name="nom"  class="form-control" placeholder="Votre nom de famille"> </td>
-					<td>Prénom : <input type="text" name="nom"  class="form-control" placeholder="Votre prénom"> </td>
+					<td> Prénom : <input type="text" name="nom"  class="form-control" placeholder="Votre prénom"> </td>
 				</tr>
+				<tr>
+					<td>Nombre de places : <input type="text" name="nbplaces"  class="form-control" placeholder="Nombre de places"> </td>
+					<td>Prix : <input type="text" name="prix"  class="form-control" placeholder="Prix du covoiturage"> </td>
+				</tr>
+				<tr>
+					<td>Ville départ : <input type="text" name="villedepart"  class="form-control" placeholder="Ville départ"> </td>
+					<td>Point départ : <input type="text" name="nom"  class="form-control" placeholder="Point départ"> </td>
+					
+				</tr>
+				<tr>										
+					<td>Ville arrivée : <input type="text" name="villearrivee"  class="form-control" placeholder="Ville arrivée"> </td>
+					<td>Point arrivée : <input type="text" name="nom"  class="form-control" placeholder="Point arrivée"> </td>
+				</tr>	
+					
+				
 			</table>
 			</fieldset> 
 			
