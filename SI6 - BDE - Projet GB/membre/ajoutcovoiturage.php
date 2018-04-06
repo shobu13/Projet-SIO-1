@@ -37,18 +37,17 @@
 			<table class="table table-striped">
 			
 			<thead>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><button class="btn btn-primary" name="ajouter" onclick="window.location.href='covoiturage.php'">Retour liste</button></td>
-			</tr>
+			
 			</thead>
 			
 			<fieldset> 
 			<legend>Informations</legend> 
 			<table>
+				<tr>
+					<td></td>
+					<td></td>										
+					<td><button class="btn btn-primary" name="ajouter" onclick="window.location.href='covoiturage.php'">Retour liste</button></td>
+				</tr>
 				<tr>
 					<td>Nom : <input type="text" name="nom"  class="form-control" placeholder="Votre nom de famille"> </td>
 					<td> Prénom : <input type="text" name="nom"  class="form-control" placeholder="Votre prénom"> </td>
@@ -66,8 +65,10 @@
 					<td>Ville arrivée : <input type="text" name="villearrivee"  class="form-control" placeholder="Ville arrivée"> </td>
 					<td>Point arrivée : <input type="text" name="nom"  class="form-control" placeholder="Point arrivée"> </td>
 				</tr>	
-					
-				
+				<tr>
+					<td><input class="btn btn-primary" type="submit" name="valider" value="Valider"></td>
+					<td><input class="btn btn-primary" type="reset" name="anuler" value="Annuler" onclick="window.location.href='covoiturage.php'"></td>
+				</tr>
 			</table>
 			</fieldset> 
 			

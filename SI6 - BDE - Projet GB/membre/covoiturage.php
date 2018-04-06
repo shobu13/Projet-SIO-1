@@ -78,5 +78,75 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 =======
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button class="btn btn-primary" name="ajouter" onclick="window.location.href = 'ajoutcovoiturage.php'">Ajouter nouveau covoiturage</button></td>
+                        </tr><tr class="success">
+                            <td>Destination</td>
+                            <td>Date départ</td>
+                            <td>Heure départ</td>
+                            <td>En savoir plus</td>
+                        </tr></thead>
+
+                    <?php
+                    echo 'PRIVILEGE : ' . $_SESSION['privilege'];
+                    if ($_SESSION['privilege'] == 'admin') {
+                        //	on récupère toutes les lignes 
+                        $resultat = $cnx->query("select * FROM covoiturage ORDER BY dateDepot DESC, etat;");
+
+                        //le résultat est récupéré sous forme d'objet
+                        $resultat->setFetchMode(PDO::FETCH_OBJ);
+                        $covoit = $resultat->fetch();
+                        while ($covoit) {
+                            if ($covoit->etat)
+                                echo '<tr>';
+                            else
+                                echo "<tr class='danger'>";
+                            ?>
+                            <td><?php echo utf8_encode($covoit->villeDepart); ?> </td>
+                            <td><?php echo dateFrancais($covoit->jourDepart); ?> </td>
+                            <td><?php echo $covoit->heureDepart; ?> </td>
+                            <td><a href='detailCovoit.php?id=<?php echo $covoit->numCo; ?>' class="glyphicon glyphicon-zoom-in"> En savoir plus</a></td>
+                            </tr>
+                            <?php
+                            // lecture du stage suivant
+                            $covoit = $resultat->fetch();
+                        }
+                    } else {
+                        //	on récupère toutes les lignes 
+                        $resultat = $cnx->query("select * FROM covoiturage WHERE etat=1 ORDER BY dateDepot DESC;");
+
+                        //le résultat est récupéré sous forme d'objet
+                        $resultat->setFetchMode(PDO::FETCH_OBJ);
+                        $covoit = $resultat->fetch();
+                        while ($covoit) {
+                            ?>
+                            <tr>
+                                <td><?php echo utf8_encode($covoit->villeDepart); ?> </td>
+                                <td><?php echo dateFrancais($covoit->jourDepart); ?> </td>
+                                <td><?php echo $covoit->heureDepart; ?> </td>
+                                <td><a href='detailCovoit.php?id=<?php echo $covoit->numCo; ?>' class="glyphicon glyphicon-zoom-in"> En savoir plus</a></td>
+                            </tr>
+                            <?php
+                            // lecture du stage suivant
+                            $covoit = $resultat->fetch();
+                        }
+                    }
+                    ?>
+                </table>
+            </div>
+            <?php include('../include/footer.php'); ?>
+        </div>
+
+        <!-- Obligatoirement avant la balise de fermeture de l'élément body  -->
+        <!-- Intégration de la libraire jQuery -->
+        <script src="bootstrap/js/jquery.js"></script>
+        <!-- Intégration de la libraire de composants du Bootstrap -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
 >>>>>>> ProjetAwen
 </html>
