@@ -93,5 +93,21 @@ INSERT INTO `covoiturage` (`numMembre`, `dateDepot`, `etat`, `prix`, `descriptio
 `heureDepart`, `heureArrive`, `jourDepart`, `jourArrive`, `nbPlaces`, `placeBagage`, `voiture`,`couleur`)
 VALUES
 (2, '2017-07-03', '1', 3, '', 'RENNES', 'SAINT BRIEUC', 'Lycée ', 'Gare', '12h00', '13h', '2017-07-04', '2017-07-04', 3, 'petit','Picasso', 'Noire' );
+INSERT INTO `covoiturage` (`numMembre`, `dateDepot`, `etat`, `prix`, `description`, `villeDepart`, `villeArrive`, `pointDepart`,`pointArrive`, 
+`heureDepart`, `heureArrive`, `jourDepart`, `jourArrive`, `nbPlaces`, `placeBagage`, `voiture`,`couleur`)
+VALUES
+(2, '2017-07-03', '0', 3, '', 'zblu', 'SAINT BRIEUC', 'Lycée ', 'Gare', '12h00', '13h', '2017-07-04', '2017-07-04', 3, 'petit','Picasso', 'Noire' );
+INSERT INTO `covoiturage` (`numMembre`, `dateDepot`, `etat`, `prix`, `description`, `villeDepart`, `villeArrive`, `pointDepart`,`pointArrive`, 
+`heureDepart`, `heureArrive`, `jourDepart`, `jourArrive`, `nbPlaces`, `placeBagage`, `voiture`,`couleur`)
+VALUES
+(2, '2017-07-03', '0', 3, '', 'test1', 'SAINT BRIEUC', 'Lycée ', 'Gare', '12h00', '13h', '2017-07-04', '2017-07-04', 3, 'petit','Picasso', 'Noire' );
+INSERT INTO `covoiturage` (`numMembre`, `dateDepot`, `etat`, `prix`, `description`, `villeDepart`, `villeArrive`, `pointDepart`,`pointArrive`, 
+`heureDepart`, `heureArrive`, `jourDepart`, `jourArrive`, `nbPlaces`, `placeBagage`, `voiture`,`couleur`)
+VALUES
+(2, '2017-07-03', '0', 3, '', 'test2', 'SAINT BRIEUC', 'Lycée ', 'Gare', '12h00', '13h', '2017-07-04', '2017-07-04', 3, 'petit','Picasso', 'Noire' );
+INSERT INTO `covoiturage` (`numMembre`, `dateDepot`, `etat`, `prix`, `description`, `villeDepart`, `villeArrive`, `pointDepart`,`pointArrive`, 
+`heureDepart`, `heureArrive`, `jourDepart`, `jourArrive`, `nbPlaces`, `placeBagage`, `voiture`,`couleur`)
+VALUES
+(2, '2017-07-03', '0', 3, '', 'test3', 'SAINT BRIEUC', 'Lycée ', 'Gare', '12h00', '13h', '2017-07-04', '2017-07-04', 3, 'petit','Picasso', 'Noire' );
 
 
