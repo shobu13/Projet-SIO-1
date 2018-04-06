@@ -52,6 +52,7 @@
 				<td></td>
 			</tr></thead>
 
+<<<<<<< HEAD
 			<?php 
 			$covoit = $resultat->fetch();
 			while ($covoit) { ?>
@@ -76,4 +77,6 @@
 	<!-- Intégration de la libraire de composants du Bootstrap -->
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+=======
+>>>>>>> ProjetAwen
 </html>
