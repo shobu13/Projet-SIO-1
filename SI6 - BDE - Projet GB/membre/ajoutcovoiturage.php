@@ -30,22 +30,23 @@
 		//le résultat est récupéré sous forme d'objet
 			$resultat->setFetchMode(PDO::FETCH_OBJ);
 		?>
-			<h2>Ajout d'un covoiturage</h2>
+			<h2>Ajout d'un covoiturage</h2>  
 			
+			<form action="traitement_ajout_covoiturage.php" method="post">
 			<fieldset> 
 			<legend>Informations sur le trajet</legend> 
 			<table>
 				<tr>
 					<td>Ville départ : <input type="text" name="villedepart"  class="form-control" placeholder="Ville de départ" required> </td>
-					<td>Point départ : <input type="text" name="nom"  class="form-control" placeholder="Point de départ" required> </td>
+					<td>Point départ : <input type="text" name="pointdepart"  class="form-control" placeholder="Point de départ" required> </td>
 					<td>Jour départ : <input type="date" name="datedepart"  class="form-control" placeholder="Date de départ" required> </td>
-					<td>Heure départ : <input type="time" name="nom"  class="form-control" placeholder="Heure de départ" required> </td>					
+					<td>Heure départ : <input type="time" name="heuredepart"  class="form-control" placeholder="Heure de départ" required> </td>					
 				</tr>
 				<tr>										
 					<td>Ville arrivée : <input type="text" name="villearrivee"  class="form-control" placeholder="Ville d'arrivée" required> </td>
-					<td>Point arrivée : <input type="text" name="nom"  class="form-control" placeholder="Point d'arrivée" required> </td>
+					<td>Point arrivée : <input type="text" name="pointarrivee"  class="form-control" placeholder="Point d'arrivée" required> </td>
 					<td>Jour arrivée : <input type="date" name="datearrivee"  class="form-control" placeholder="Date de départ" required> </td>
-					<td>Heure arrivée : <input type="time" name="nom"  class="form-control" placeholder="Heure de départ" required> </td>
+					<td>Heure arrivée : <input type="time" name="heurearrivee"  class="form-control" placeholder="Heure de départ" required> </td>
 				</tr>				
 			</table>
 			</fieldset> 
@@ -59,7 +60,7 @@
 				</tr>
 				<tr>
 					<td>Nombre de places : <input type="text" name="nbplaces"  class="form-control" placeholder="Nombre de places" required> </td>
-					<td>Place bagages: <select type="text" name="nbplaces"  class="form-control" placeholder="Nombre de places" required>
+					<td>Place bagages: <select type="text" name="placesbagages"  class="form-control" placeholder="Nombre de places" required>
 											<option value="1">Petit</option>
 											<option value="2">Moyen</option> 
 											<option value="3">Grand</option> 
@@ -82,7 +83,8 @@
 				</tr>
 			</table>
 			</fieldset>
-			
+			<input type='hidden' name='numMembre' value='<?php echo($_SESSION['numMembre']) ?>'>
+			</form>
 	</div>
 	<?php include('../include/footer.php'); ?>
 </div>
